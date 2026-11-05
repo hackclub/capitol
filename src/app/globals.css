@@ -1,0 +1,1300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@primer/css/dist/markdown.css';
+@import 'highlight.js/styles/github.css';
+
+/* The design's two text faces, self-hosted so no request leaves the origin
+   for type and the build needs no network. Latin subsets only. */
+@font-face {
+  font-family: 'PT Sans';
+  src: url('/fonts/PTSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PT Sans';
+  src: url('/fonts/PTSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/PTSerif-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/PTSerif-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Canterbury is the blackletter the "Capitol" wordmark is set in. Nothing else
+   on the site uses it. */
+@font-face {
+  font-family: 'Canterbury';
+  src: url('/fonts/Canterbury.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* The collage palette: paper, ink, sky, and the one blue control. */
+  --paper: #fffef2;
+  --ink: #151d23;
+  --ink-soft: #32424e;
+  --ink-rule: rgba(21, 29, 35, 0.5);
+  --sky-top: #7ec9ff;
+  --sky-bottom: #dff2ff;
+  --blue: #009dff;
+  --blue-cross: #2f77ad;
+  --logo-brown: #352a28;
+
+  /* One design unit: the homepage was drawn at 1728px wide, and everything in
+     the hero is placed in those pixels. --u shrinks with the viewport and never
+     grows past 1px, so the composition stays exact at 1728 and scales down
+     proportionally below it. --w is the same ratio without the cap, for the
+     torn paper edges that must always span the full width. */
+  --u: min(1px, calc(100vw / 1728));
+  --w: calc(100vw / 1728);
+
+  --font-serif: 'PT Serif', Georgia, serif;
+  --font-sans: 'PT Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Canterbury', 'Old English Text MT', 'UnifrakturMaguntia', serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color-scheme: light;
+  background: var(--ink);
+  /* The frame ends on the dark ground, so overscroll at the bottom reads as
+     more of the same rather than a white flash. */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.406;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Browser surfaces, themed from the palette. */
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+a {
+  color: inherit;
+}
+
+.link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--blue);
+}
+
+/* ---- Type ----------------------------------------------------------------- */
+/* Line height is Canterbury's own hhea metrics (0.905), which is what the
+   design measured; Windows browsers would otherwise use the wider OS/2
+   metrics and drop the word 60px lower. */
+.t-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.905;
+  color: var(--ink);
+}
+
+.t-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.406;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.t-lead {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 1.406;
+  color: var(--ink);
+}
+
+.t-body {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+@media (max-width: 780px) {
+  .t-heading {
+    font-size: 28px;
+  }
+  .t-lead {
+    font-size: 19px;
+  }
+  .t-body {
+    font-size: 17px;
+  }
+}
+
+/* ---- Sky ------------------------------------------------------------------ */
+.sky {
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
+  position: relative;
+}
+
+/* The design lays a photographed paper grain over the sky, multiplied at half
+   strength, so the gradient reads as printed rather than rendered. */
+.sky__grain {
+  position: absolute;
+  inset: 0;
+  background: url('/collage/sky-grain.jpg') center / cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* ---- Paper sheet ---------------------------------------------------------- */
+/* The cream sheet every page's content sits on. The torn edges are the exact
+   paths from the design, exported with their drop shadows, and they scale with
+   the page width; the body between them is plain cream with the same grain
+   multiplied over it. */
+.paper {
+  position: relative;
+  /* Above the sky before it and the footer after it, so both torn edges hang
+     over their neighbours instead of being painted under them. */
+  z-index: 1;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.paper__grain {
+  position: absolute;
+  inset: 0;
+  background: url('/collage/paper-grain.jpg') 0 0 / 512px 341px repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.paper__edge {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.paper__edge--top {
+  bottom: 100%;
+  height: calc(190.6 * var(--w));
+}
+
+.paper__edge--bottom {
+  top: 100%;
+  height: calc(212.16 * var(--w));
+}
+
+/* The grain continues over the torn edges, clipped to the edge's own shape,
+   so the sheet reads as one piece of paper rather than a flat rim around a
+   textured body. */
+.paper__edge-grain {
+  background: url('/collage/paper-grain.jpg') 0 0 / 512px 341px repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  -webkit-mask: var(--edge) center / 100% 100% no-repeat;
+  mask: var(--edge) center / 100% 100% no-repeat;
+}
+
+.paper__body {
+  position: relative;
+}
+
+/* ---- Homepage hero -------------------------------------------------------- */
+.hero {
+  position: relative;
+  height: calc(1117 * var(--u));
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Anything placed by design pixel coordinates. `--x`/`--y` are the design's
+   left/top, measured from the frame's centre line so the composition stays
+   centred on screens wider than 1728. */
+.hero__piece {
+  position: absolute;
+  left: calc(50% + (var(--x) - 864) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--wd) * var(--u));
+  height: calc(var(--ht) * var(--u));
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__piece > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__cloud > img {
+  object-fit: cover;
+}
+
+/* The Capitol is a flipped cut-out, so the dome faces the title. */
+.hero__capitol > img {
+  transform: scaleX(-1);
+}
+
+/* The blossom scrap is drawn running off the right of the 1728px frame, so it
+   is anchored to the viewport's right edge rather than to the centred frame:
+   past 1728 the rest of the composition stays centred, but the branches stay
+   stuck to the side at every width. The overhang is the design's own — the
+   scrap's right edge sits 232 design px past the frame — so at 1728 and below
+   this renders exactly as it did before. */
+.hero__blossoms {
+  left: auto;
+  right: calc(-232 * var(--u));
+}
+
+/* The airliner cut-out that flies over the dome as the page scrolls.
+   HeroPlane eases --fx/--fy (design px from the start of the flight) and --fr
+   (degrees) with the scroll; --pu is the unit that turns design px into screen
+   px for the layout in use. It flies above the collage but under the title,
+   logos and button. */
+.hero__plane {
+  --pu: var(--u);
+  z-index: 2;
+  transform: translate(calc(var(--fx) * var(--pu)), calc(var(--fy) * var(--pu)))
+    rotate(calc(var(--fr) * 1deg));
+  will-change: transform;
+}
+
+.hero__plane > img {
+  filter: drop-shadow(0 calc(6 * var(--pu)) calc(8 * var(--pu)) rgba(21, 29, 35, 0.16));
+}
+
+/* The row sizes to the marks it actually holds and sets the gap itself. The
+   design drew it 487px wide for five children, spread by space-between; with
+   the Challenge wordmark out of the row that rule stretched the two remaining
+   gaps to about 160px each, so the gap is stated instead — 34px, the spacing
+   the comp's own five-up row worked out to. */
+.hero__logos {
+  position: absolute;
+  top: calc(79.54 * var(--u));
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(49.44 * var(--lu));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(34 * var(--lu));
+  z-index: 3;
+}
+
+/* Each logo carries its design width/height in --lw/--lh; --lu is the unit
+   they're multiplied by, so the narrow layout can rescale the row at once.
+   Both layouts draw the row 1.2x the comp's size. */
+.hero__logos {
+  --lu: calc(var(--u) * 1.2);
+}
+
+.hero__logos a {
+  display: block;
+  width: calc(var(--lw) * var(--lu));
+  height: calc(var(--lh) * var(--lu));
+  transition: opacity 0.15s ease;
+}
+
+.hero__logos a:hover {
+  opacity: 0.8;
+}
+
+.hero__logos img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero__logos .hero__cross {
+  width: calc(16 * var(--lu));
+  height: calc(16 * var(--lu));
+}
+
+.hero__title {
+  position: absolute;
+  top: calc(211 * var(--u));
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(623 * var(--u));
+  text-align: center;
+  z-index: 3;
+}
+
+.hero__presents {
+  display: block;
+  text-align: left;
+  margin-left: calc(11 * var(--u));
+  font-family: var(--font-serif);
+  font-size: calc(20.5 * var(--u));
+  line-height: 1.406;
+  color: var(--ink-soft);
+}
+
+.hero__capitol-word {
+  display: block;
+  margin-top: calc(-4 * var(--u));
+  line-height: 0.905;
+  font-size: calc(237.8 * var(--u));
+  white-space: nowrap;
+}
+
+.hero__cta {
+  margin-top: calc(24 * var(--u));
+  display: flex;
+  justify-content: center;
+}
+.hero__sub {
+  margin-top: calc(27 * var(--u));
+  font-family: var(--font-serif);
+  font-size: calc(24 * var(--u));
+  line-height: 1.406;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+/* ---- Apply button --------------------------------------------------------- */
+/* Sits where the comp draws its sign-up pill (top 599, centred), in the
+   comp's blue button vocabulary at the pill's own height. */
+.hero__apply {
+  position: absolute;
+  top: calc(599 * var(--u));
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(12 * var(--u));
+  height: calc(48 * var(--u));
+  padding: 0 calc(44 * var(--u));
+  border-radius: 999px;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: calc(18 * var(--u));
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  z-index: 4;
+  box-shadow:
+    0 0 6.3px rgba(129, 207, 255, 0.25),
+    0 2px 6px rgba(21, 29, 35, 0.12);
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero__apply img {
+  width: calc(13 * var(--u));
+  height: calc(13 * var(--u));
+}
+
+.hero__apply:hover {
+  background: #0089de;
+  transform: translateX(-50%) translateY(-1px);
+}
+
+.hero__apply:active {
+  transform: translateX(-50%) scale(0.97);
+}
+
+/* ---- Hero on narrow screens ----------------------------------------------- */
+/* Below 900px the design's proportional scale would put the subtitle under
+   10px, so the hero switches to a stacked composition: the text sits in its
+   own column at readable sizes and the collage pieces re-anchor to the
+   corners at viewport-relative sizes. */
+@media (max-width: 899px) {
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    padding: 20px 20px 72vw;
+  }
+
+  .hero__logos {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    height: calc(49.44 * var(--lu));
+    margin: 0 auto;
+  }
+
+  .hero__logos {
+    --lu: calc(0.8px * 1.2);
+  }
+
+  .hero__logos .hero__cross {
+    width: calc(16 * var(--lu));
+    height: calc(16 * var(--lu));
+  }
+
+  .hero__title {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    margin: 20vh auto 0;
+  }
+
+  .hero__presents {
+    font-size: 17px;
+    margin-left: 2px;
+    text-align: center;
+  }
+
+  .hero__capitol-word {
+    font-size: clamp(64px, 21vw, 118px);
+    margin-top: -2px;
+  }
+
+  .hero__sub {
+    font-size: 19px;
+    margin-top: 14px;
+  }
+
+  .hero__apply {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: flex;
+    width: fit-content;
+    height: 48px;
+    margin: 30px auto 0;
+    padding: 0 40px;
+    gap: 10px;
+    font-size: 17px;
+  }
+
+  .hero__apply:hover {
+    transform: translateY(-1px);
+  }
+
+  .hero__apply:active {
+    transform: scale(0.97);
+  }
+
+  .hero__apply img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero__piece {
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+  }
+
+  .hero__cloud--left {
+    left: -30vw;
+    top: -10vw;
+    width: 100vw;
+    height: 66vw;
+  }
+
+  .hero__cloud--right {
+    right: -20vw;
+    top: 40vw;
+    width: 90vw;
+    height: 60vw;
+  }
+
+  .hero__grain {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* The scrap and the cut-out keep the design's registration: both scale by
+     the same ratio (--mk) from their design boxes, (-24.98, 436.5, 732x757)
+     and (-403, 396, 1304x978), and are anchored to the hero's bottom. */
+  .hero {
+    --mk: 0.115vw;
+  }
+
+  .hero__capitol {
+    left: calc(-403 * var(--mk));
+    bottom: calc(-350 * var(--mk));
+    width: calc(1304 * var(--mk));
+    height: calc(978 * var(--mk));
+  }
+
+  .hero__torn-left {
+    left: calc(-24.98 * var(--mk));
+    /* 978 + 396 - (757 + 436.5) = 180.5 design px above the cut-out's bottom. */
+    bottom: calc((-350 + 180.5) * var(--mk));
+    width: calc(732 * var(--mk));
+    height: calc(757 * var(--mk));
+  }
+
+  /* The flattened blossom scrap tucks into the top-right corner, branches
+     running off the edge, at its own aspect ratio. */
+  .hero__blossoms {
+    right: -12vw;
+    top: 15vw;
+    width: 52vw;
+    height: calc(52vw * 471.5 / 557.5);
+  }
+
+  /* The plane keeps the Capitol's registration (--mk, anchored to the hero's
+     bottom) so its flight still clears the dome: design y maps to
+     (1024 - y) * --mk above the bottom, as the cut-out's own box does. */
+  .hero__plane {
+    --pu: var(--mk);
+    left: calc(var(--x) * var(--mk));
+    bottom: calc((1024 - var(--y) - var(--ht)) * var(--mk));
+    width: calc(var(--wd) * var(--mk));
+    height: calc(var(--ht) * var(--mk));
+  }
+}
+
+/* ---- Homepage body -------------------------------------------------------- */
+.home-paper {
+  /* The sheet's flat top starts 120 design px below the hero's bottom; the
+     torn edge fills the gap and overlaps the sky above it. */
+  margin-top: calc(120 * var(--w));
+}
+
+.home-paper .paper__body {
+  width: min(850px, 100% - 40px);
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 114px;
+}
+
+.home-section + .home-section {
+  margin-top: 68px;
+}
+
+.home-section > .t-heading + * {
+  margin-top: 10px;
+}
+
+.home-section .t-heading + .home-section__content {
+  margin-top: 28px;
+}
+
+.t-lead p + p {
+  margin-top: 1.406em;
+}
+
+/* The recognised-by logos: each mark is printed in the one brown the design
+   uses (the PNGs in public/collage are recoloured to it), so five
+   differently-coloured marks read as one row of print. */
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 21px 34px;
+  opacity: 0.8;
+}
+
+.logo-row li {
+  list-style: none;
+}
+
+.logo-row__mark {
+  display: block;
+  height: calc(var(--h) * 1px);
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  flex: none;
+}
+
+/* A mark that sits on the page as a greyscale plate and comes back to its own
+   colour under the cursor, the way the project strip's screenshots do — same
+   filter and same timing as .project-card__image > img, so the two read as one
+   idea. Shared by the recognised-by row and the Challenge mark above it. */
+.ink-mark {
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+
+.ink-mark:hover {
+  filter: grayscale(0) contrast(1);
+}
+
+@media (max-width: 720px) {
+  .logo-row {
+    gap: 16px 24px;
+  }
+  .logo-row__mark {
+    height: calc(var(--h) * 0.72px);
+  }
+}
+
+/* ---- Project strip -------------------------------------------------------- */
+/* The cards run wider than the page on both sides, exactly as drawn. The row
+   drifts on its own (ProjectStrip) and still pans by hand; with reduced motion
+   it only pans by hand. The first card starts a little off the left edge, as
+   in the comp. */
+.strip {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  margin-top: 28px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink-rule) transparent;
+  padding-bottom: 12px;
+}
+
+.strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.strip::-webkit-scrollbar-thumb {
+  background: var(--ink-rule);
+  border-radius: 999px;
+}
+
+.strip__track {
+  display: flex;
+  gap: 34.88px;
+  width: max-content;
+  padding: 0 34.88px;
+}
+
+.strip__track > * {
+  scroll-snap-align: start;
+}
+
+/* Snapping would tug the drifting row back to the nearest card. */
+.strip--auto {
+  scroll-snap-type: none;
+}
+
+/* The looped copy of the cards lays out as if it were part of the track, so
+   the gap between the last card and its copy matches every other gap. */
+.strip__copy {
+  display: contents;
+}
+
+.project-card {
+  display: block;
+  width: 241.84px;
+  flex: none;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.project-card__image {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 241.84 / 136.03;
+  overflow: hidden;
+  background: #cfcfc9;
+}
+
+.project-card__image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Printed in one ink, like the design's greyscale plate. */
+  filter: grayscale(1) contrast(1.05);
+  mix-blend-mode: multiply;
+  transition: filter 0.3s ease;
+}
+
+.project-card__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.25),
+    inset 0 2px 14.6px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.project-card:hover .project-card__image > img,
+.project-card:focus-visible .project-card__image > img {
+  filter: grayscale(0) contrast(1);
+}
+
+.project-card__title {
+  margin-top: 6.6px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 24.8px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-card__text {
+  margin-top: 12.4px;
+  font-size: 15.5px;
+  line-height: 1.406;
+}
+
+.project-card__text a {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+/* ---- FAQ ------------------------------------------------------------------ */
+.faq-grid {
+  width: min(909px, 100%);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.faq-card {
+  border: 4px solid var(--ink-rule);
+  padding: 21px 25px;
+}
+
+.faq-card__q {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.406;
+  color: #000;
+}
+
+.faq-card__a {
+  margin-top: 10px;
+  font-size: 15.5px;
+  line-height: 1.406;
+  color: var(--ink);
+}
+
+.faq-card__a p + p {
+  margin-top: 0.7em;
+}
+
+@media (max-width: 720px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+}
+
+/* ---- Site nav (interior pages) -------------------------------------------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.site-nav--solid {
+  background: var(--paper);
+  box-shadow: 0 1px 0 rgba(21, 29, 35, 0.12);
+}
+
+.site-nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 64px;
+}
+
+.site-nav__logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-nav__logos img {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.site-nav__logos .site-nav__cross {
+  height: 12px;
+  width: 12px;
+}
+
+.site-nav__logos .site-nav__seal {
+  height: 34px;
+}
+
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+  font-size: 17px;
+}
+
+.site-nav__links a,
+.site-nav__links button {
+  font: inherit;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.site-nav__links a:hover,
+.site-nav__links button:hover,
+.site-nav__links a[aria-current='page'] {
+  border-bottom-color: var(--ink);
+}
+
+.site-nav__links .site-nav__cta {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border-bottom: 0;
+}
+
+.site-nav__links .site-nav__cta:hover {
+  background: #0089de;
+  border-bottom: 0;
+}
+
+.site-nav__toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  padding: 6px;
+  cursor: pointer;
+}
+
+.site-nav__sheet {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .site-nav__links {
+    display: none;
+  }
+  .site-nav__toggle {
+    display: inline-flex;
+  }
+  .site-nav__logos .site-nav__seal,
+  .site-nav__logos .site-nav__cross:last-of-type {
+    display: none;
+  }
+  .site-nav__sheet {
+    display: block;
+    background: var(--paper);
+    box-shadow: 0 1px 0 rgba(21, 29, 35, 0.12);
+    padding: 8px 24px 18px;
+  }
+  .site-nav__sheet ul {
+    list-style: none;
+    display: grid;
+    gap: 4px;
+  }
+  .site-nav__sheet a,
+  .site-nav__sheet button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    font-size: 18px;
+    padding: 10px 0;
+    color: var(--ink);
+    background: none;
+    border: 0;
+    border-bottom: 1px solid rgba(21, 29, 35, 0.12);
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/* ---- Interior page shell -------------------------------------------------- */
+.page-sky {
+  height: 190px;
+}
+
+.page-paper {
+  margin-top: calc(60 * var(--w));
+  min-height: 60vh;
+}
+
+.page-paper .paper__body {
+  width: min(1100px, 100% - 40px);
+  margin: 0 auto;
+  padding: 24px 0 96px;
+}
+
+.page-paper--narrow .paper__body {
+  width: min(758px, 100% - 40px);
+}
+
+.page-paper__title {
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+@media (max-width: 720px) {
+  .page-paper__title {
+    font-size: 32px;
+  }
+}
+
+.page-intro {
+  margin-top: 14px;
+}
+
+.page-section {
+  margin-top: 56px;
+}
+
+.page-section > .t-heading {
+  font-size: 30px;
+}
+
+.page-section > .t-heading + * {
+  margin-top: 16px;
+}
+
+/* A plain rule-bordered box, the FAQ card's material at page scale. */
+.box {
+  border: 4px solid var(--ink-rule);
+  padding: 22px 26px;
+}
+
+.box + .box {
+  margin-top: 15px;
+}
+
+.box__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.406;
+  color: #000;
+}
+
+.box__body {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.box__body p + p,
+.box__body ul + p,
+.box__body p + ul {
+  margin-top: 0.7em;
+}
+
+/* Tailwind's preflight strips list markers; the boxes want them back. */
+.box__body ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+
+.box__body ol {
+  list-style: decimal;
+  padding-left: 1.2em;
+}
+
+.box__body li::marker {
+  color: var(--ink-soft);
+}
+
+.box__body li + li {
+  margin-top: 4px;
+}
+
+/* Buttons: the hero's blue for the primary action, an ink rule for the
+   secondary. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 0 6.3px rgba(129, 207, 255, 0.25);
+}
+
+.btn--primary:hover {
+  background: #0089de;
+}
+
+.btn--ghost {
+  border-color: var(--ink-rule);
+  color: var(--ink);
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  background: rgba(21, 29, 35, 0.06);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Guides layout: a list of guides down the left, prose on the right. */
+.guide-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 899px) {
+  .guide-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.guide-nav h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.guide-nav section + section {
+  margin-top: 22px;
+}
+
+.guide-nav a {
+  display: block;
+  padding: 5px 0;
+  font-size: 16px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.guide-nav a:hover {
+  color: var(--ink);
+}
+
+.guide-nav a[aria-current='page'] {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 899px) {
+  .guide-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  .guide-nav section + section {
+    margin-top: 0;
+  }
+  .guide-nav h2 {
+    display: none;
+  }
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(241px, 1fr));
+  gap: 34px 34.88px;
+}
+
+.gallery-grid .project-card {
+  width: auto;
+}
+
+/* ---- Footer --------------------------------------------------------------- */
+.site-footer {
+  position: relative;
+  background: var(--ink);
+  color: var(--paper);
+  padding: calc(212.16 * var(--w) + 72px) 24px 56px;
+}
+
+.site-footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 720px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.site-footer__word {
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--paper);
+}
+
+.site-footer__blurb {
+  margin-top: 12px;
+  max-width: 34ch;
+  font-size: 16px;
+  color: rgba(255, 254, 242, 0.75);
+}
+
+.site-footer h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.site-footer a {
+  color: rgba(255, 254, 242, 0.8);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.site-footer a:hover {
+  color: var(--paper);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-underline-offset: 3px;
+}
+
+.site-footer__legal {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 254, 242, 0.18);
+  font-size: 14px;
+  color: rgba(255, 254, 242, 0.6);
+}
+
+/* ---- Markdown (guides) ---------------------------------------------------- */
+.markdown-body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: transparent;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  border-bottom: 0;
+}
+
+.markdown-body blockquote {
+  color: var(--ink-soft);
+  border-left-color: var(--ink-rule);
+}
+
+.markdown-body a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}

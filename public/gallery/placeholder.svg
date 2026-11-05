@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225">
+  <rect width="400" height="225" fill="#e0e6ed"/>
+  <text x="50%" y="45%" text-anchor="middle" fill="#8492a6" font-family="system-ui, sans-serif" font-size="16">
+    No Preview
+  </text>
+  <text x="50%" y="55%" text-anchor="middle" fill="#8492a6" font-family="system-ui, sans-serif" font-size="16">
+    Available
+  </text>
+</svg>
