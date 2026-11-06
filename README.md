@@ -10,6 +10,52 @@ writes plain files to `out/` that any static host can serve. Applications go to
 `forms.hackclub.com/capitol-apply` and certification requests to
 `forms.hackclub.com/congressional_certification`.
 
+## Adding your project to the gallery
+
+The gallery is built from `src/app/gallery/projects.json`. To add your project's demo link and
+repo link, open a pull request:
+
+1. **Fork** [hackclub/capitol](https://github.com/hackclub/capitol) using the **Fork** button at
+   the top right of the repo page.
+2. **Clone your fork** and make a branch:
+
+   ```bash
+   git clone https://github.com/<your-username>/capitol.git
+   cd capitol
+   git checkout -b add-<your-project-name>
+   ```
+
+3. **Add an entry** to the end of the list in `src/app/gallery/projects.json`. Remember to put a
+   comma after the entry before yours, and keep the file valid JSON:
+
+   ```json
+   {
+     "recordId": "<your-username>-<your-project-name>",
+     "projectName": "Your Project Name",
+     "demoUrl": "https://your-project.example.com",
+     "codeUrl": "https://github.com/<your-username>/<your-repo>",
+     "githubUsername": "<your-username>",
+     "imageSrc": "/gallery/screenshots/<your-username>-<your-project-name>.webp"
+   }
+   ```
+
+   - `recordId` must be unique in the file. Your GitHub username plus the project name works.
+   - `demoUrl` is where people can try the project. `codeUrl` is the public repo.
+   - For a screenshot, add an image (`.webp` preferred) to `public/gallery/screenshots/` with a
+     name that matches `imageSrc`. If you don't have one, use `"/gallery/placeholder.svg"`.
+
+4. **Check it** with `pnpm install && pnpm dev`, then open <http://localhost:3000/gallery>.
+5. **Commit and push** to your fork:
+
+   ```bash
+   git add src/app/gallery/projects.json public/gallery/screenshots
+   git commit -m "Add <your project name> to the gallery"
+   git push origin add-<your-project-name>
+   ```
+
+6. **Open a pull request**: on your fork's GitHub page, click **Compare & pull request** and
+   target `main` on `hackclub/capitol`. Say which project it is in the description.
+
 ## Tech stack
 
 - [Next.js 15](https://nextjs.org/) (App Router) and React 18
