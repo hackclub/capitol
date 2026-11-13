@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
-  }
+  },
+  {
+    "recordId": "robot3-trackcognitastudy",
+    "projectName": "Cognita Study",
+    "demoUrl": "https://cognitastudy.me",
+    "codeUrl": "https://github.com/robot3-track/cognita-clean",
+    "githubUsername": "robot3-track",
+    "imageSrc": "/gallery/placeholder.svg"
+  } 
 ]
