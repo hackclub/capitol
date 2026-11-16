@@ -8,6 +8,14 @@
     "imageSrc": "/gallery/screenshots/recZPTctXUSGFWmLF.webp"
   },
   {
+    "recordId": "heonaliu-cosync",
+    "projectName": "CoSync",
+    "demoUrl": "https://startcosync.org/",
+    "codeUrl": "https://github.com/heonaliu/cosync",
+    "githubUsername": "heonaliu",
+    "imageSrc": "/gallery/screenshots/heonaliu-cosync-app.webp"
+  },
+  {
     "recordId": "recVv2u22LmpHp9Fv",
     "projectName": "Cac",
     "demoUrl": "https://aryanvx.pythonanywhere.com/",
