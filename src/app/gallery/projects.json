@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "matteogxc-solace-app",
+    "projectName": "Solace",
+    "demoUrl": "https://solace.hollow.host/",
+    "codeUrl": "https://github.com/MatteoGXC/Solace-App",
+    "githubUsername": "MatteoGXC",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
