@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "lefteris140-cleanclass",
+    "projectName": "CleanClass",
+    "demoUrl": "https://clean-class.vercel.app/",
+    "codeUrl": "https://github.com/lefteris140/CleanClass",
+    "githubUsername": "lefteris140",
+    "imageSrc": "/gallery/screenshots/lefteris140-cleanclass.webp"
   }
 ]
