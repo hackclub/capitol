@@ -1630,5 +1630,14 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+  "recordId": "aa-0324-campusway",
+  "projectName": "CampusWay",
+  "demoUrl": "https://campusway.streamlit.app",
+  "codeUrl": "https://github.com/AA-0324/campusway",
+  "githubUsername": "AA-0324",
+  "imageSrc": "/gallery/screenshots/IMG_2830.jpeg"
   }
+  
 ]
