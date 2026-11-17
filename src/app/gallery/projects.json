@@ -1,5 +1,12 @@
 [
-  {"recordId": "MaxDoubin-home-radar", "projectName": "Home Radar", "demoUrl": "https://github.com/MaxDoubin/HomeRadar/releases", "codeUrl": "https://github.com/MaxDoubin/HomeRadar", "githubUsername": "MaxDoubin", "imageSrc": "/gallery/placeholder.svg"},
+  {
+    "recordId": "MaxDoubin-home-radar",
+    "projectName": "Home Radar",
+    "demoUrl": "https://github.com/MaxDoubin/HomeRadar/releases",
+    "codeUrl": "https://github.com/MaxDoubin/HomeRadar",
+    "githubUsername": "MaxDoubin",
+    "imageSrc": "/gallery/placeholder.svg"
+  },
   {
     "recordId": "recZPTctXUSGFWmLF",
     "projectName": "Sobersteps",
