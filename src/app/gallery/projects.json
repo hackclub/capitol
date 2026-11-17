@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "Osaydj-desksignal",
+    "projectName": "DeskSignal",
+    "demoUrl": "https://desksignal-business-analytics.streamlit.app/",
+    "codeUrl": "https://github.com/Osaydj/DeskSignal",
+    "githubUsername": "Osaydj",
+    "imageSrc": "/gallery/screenshots/Osaydj-desksignal.webp"
   }
 ]
