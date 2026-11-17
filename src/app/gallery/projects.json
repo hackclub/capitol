@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "aartisr-civic-accord",
+    "projectName": "Civic Accord",
+    "demoUrl": "https://governanceapp.ai-aarti.com/",
+    "codeUrl": "https://github.com/aartisr/governance-app",
+    "githubUsername": "aartisr",
+    "imageSrc": "/gallery/screenshots/aartisr-civic-accord.webp"
   }
 ]
