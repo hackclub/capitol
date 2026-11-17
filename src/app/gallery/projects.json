@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+  "recordId": "sgohils-flowlab",
+  "projectName": "Flowlab",
+  "demoUrl": "https://flowlab1.vercel.app/",
+  "codeUrl": "https://github.com/sgohils/FLOWLAB",
+  "githubUsername": "sgohils",
+  "imageSrc": "/gallery/screenshots/sgohils-flowlab.webp"
   }
 ]
