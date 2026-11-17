@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "aiscihub-benefitstep",
+    "projectName": "BenefitStep",
+    "demoUrl": "https://aiscihub.github.io/benefitstep/",
+    "codeUrl": "https://github.com/aiscihub/benefitstep",
+    "githubUsername": "aiscihub",
+    "imageSrc": "/gallery/screenshots/aiscihub-benefitstep.webp"
   }
 ]
