@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "tejgluth-leptotrials",
+    "projectName": "LeptoTrials",
+    "demoUrl": "https://leptotrials.com",
+    "codeUrl": "https://github.com/tejgluth/LeptoTrials",
+    "githubUsername": "tejgluth",
+    "imageSrc": "/gallery/screenshots/tejgluth-leptotrials.webp"
   }
 ]
