@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "Raphael-Azerad-echo",
+    "projectName": "Echo",
+    "demoUrl": "https://raphael-azerad.github.io/echo-cac/",
+    "codeUrl": "https://github.com/Raphael-Azerad/echo-cac",
+    "githubUsername": "Raphael-Azerad",
+    "imageSrc": "/gallery/screenshots/Raphael-Azerad-echo.jpg"
   }
 ]
