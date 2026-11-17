@@ -1,13 +1,5 @@
 [
   {
-    "recordId": "MaxDoubin-home-radar",
-    "projectName": "Home Radar",
-    "demoUrl": "https://github.com/MaxDoubin/HomeRadar/releases",
-    "codeUrl": "https://github.com/MaxDoubin/HomeRadar",
-    "githubUsername": "MaxDoubin",
-    "imageSrc": "/gallery/placeholder.svg"
-  },
-  {
     "recordId": "recZPTctXUSGFWmLF",
     "projectName": "Sobersteps",
     "demoUrl": "https://soberstepsofficial.vercel.app/",
@@ -1638,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "MaxDoubin-home-radar",
+    "projectName": "Home Radar",
+    "demoUrl": "https://github.com/MaxDoubin/HomeRadar/releases",
+    "codeUrl": "https://github.com/MaxDoubin/HomeRadar",
+    "githubUsername": "MaxDoubin",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
