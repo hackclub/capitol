@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "auei44-repera",
+    "projectName": "Repera",
+    "demoUrl": "https://repera.onrender.com/",
+    "codeUrl": "https://github.com/auei44/repera",
+    "githubUsername": "auei44",
+    "imageSrc": "/gallery/screenshots/repera.png"
   }
 ]
