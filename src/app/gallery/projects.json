@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+  "recordId": "cxdang-rove",
+  "projectName": "Rove",
+  "demoUrl": "https://rove-cac-preview.vercel.app/",
+  "codeUrl": "https://github.com/SahilGBhuva/rove",
+  "githubUsername": "cxdang",
+  "imageSrc": "/gallery/placeholder.svg"
   }
 ]
