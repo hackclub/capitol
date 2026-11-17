@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "volostrs-orbit",
+    "projectName": "Orbit",
+    "demoUrl": "https://orbit-indol-seven.vercel.app/",
+    "codeUrl": "https://github.com/volostrs/Orbit",
+    "githubUsername": "volostrs",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
