@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "miheerparasnis-max-thermyx",
+    "projectName": "Thermyx",
+    "demoUrl": "https://thermyx.web.app/",
+    "codeUrl": "https://github.com/Thermyx/Thermyx",
+    "githubUsername": "miheerparasnis-max",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
