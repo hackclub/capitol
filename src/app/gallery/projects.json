@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "caden-what-did-i-miss",
+    "projectName": "What Did I Miss?",
+    "demoUrl": "https://what-did-i-miss-chi.vercel.app/",
+    "codeUrl": "https://github.com/CadenMcAllister/what-did-i-miss",
+    "githubUsername": "CadenMcAllister",
+    "imageSrc": "/gallery/screenshots/caden-what-did-i-miss.webp"
   }
 ]
