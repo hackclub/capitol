@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
-  }
+  },
+  {
+  "recordId": "lyonmathprep-repquest",
+  "projectName": "RepQuest",
+  "demoUrl": "https://lyonmathprep.github.io/repquest/",
+  "codeUrl": "https://github.com/LyonMathPrep/repquest",
+  "githubUsername": "LyonMathPrep",
+  "imageSrc": "/gallery/placeholder.svg"
+}
 ]
