@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "sbdevz-briefcase-pocket-lawyer",
+    "projectName": "Briefcase Pocket Lawyer",
+    "demoUrl": "https://briefcase-woad.vercel.app/",
+    "codeUrl": "https://github.com/SBdevz/Briefcase-Pocket-Lawyer",
+    "githubUsername": "SBdevz",
+    "imageSrc": "/gallery/screenshots/sbdevz-briefcase-pocket-lawyer.webp"
   }
 ]
