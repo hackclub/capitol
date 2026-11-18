@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+  "recordId": "recN8vK3qT7mX2pL9aR",
+  "projectName": "StateBreaker",
+  "demoUrl": "https://github.com/laetaest/Statebreaker/raw/refs/heads/main/statebreaker.apk",
+  "codeUrl": "https://github.com/laetaest/Statebreaker",
+  "githubUsername": "laetaest",
+  "imageSrc": "/gallery/placeholder.svg"
   }
 ]
