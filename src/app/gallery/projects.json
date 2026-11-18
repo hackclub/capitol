@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "Skoister-Physyra",
+    "projectName": "Physyra",
+    "demoUrl": "https://physyra.com",
+    "codeUrl": "https://github.com/Skoister/Physyra",
+    "githubUsername": "Skoister",
+    "imageSrc": "/gallery/screenshots/Skoister-Physyra.webp"
   }
 ]
