@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "pratyushsh99-levelset",
+    "projectName": "LevelSet",
+    "demoUrl": "https://level-set-zeta.vercel.app",
+    "codeUrl": "https://github.com/pratyushsh99/LevelSet-App",
+    "githubUsername": "pratyushsh99",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
