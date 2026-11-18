@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  }, 
+  {
+    "recordId": "hipernit-wildfireready",
+    "projectName": "WildfireReady",
+    "demoUrl": "https://wildfireready.expo.app/",
+    "codeUrl": "https://github.com/Hipernit/wildfireready",
+    "githubUsername": "Hipernit",
+    "imageSrc": "/gallery/screenshots/hipernit-wildfireready.webp"
   }
 ]
