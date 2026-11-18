@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "j0nsh1n-flexweek",
+    "projectName": "FlexWeek",
+    "demoUrl": "https://github.com/j0nsh1n/FlexWeek/releases/latest",
+    "codeUrl": "https://github.com/j0nsh1n/FlexWeek",
+    "githubUsername": "j0nsh1n",
+    "imageSrc": "/gallery/screenshots/j0nsh1n-flexweek.webp"
   }
 ]
