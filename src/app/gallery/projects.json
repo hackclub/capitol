@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "snagunur2010-browse-a-zip-code",
+    "projectName": "Browse a ZIP Code",
+    "demoUrl": "https://browse-a-zipcode.streamlit.app/",
+    "codeUrl": "https://github.com/snagunur2010/Browse-a-Zipcode",
+    "githubUsername": "snagunur2010",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
