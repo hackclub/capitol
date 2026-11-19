@@ -1631,4 +1631,12 @@
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
   }
+  {
+    "recordId": "sthanug-nba-transaction-tracker",
+    "projectName": "NBA Transaction Tracker",
+    "demoUrl": "https://nba-transaction-tracker.streamlit.app",
+    "codeUrl": "https://github.com/sthanug/nba-transaction-tracker",
+    "githubUsername": "sthanug",
+    "imageSrc": "/gallery/screenshots/placeholder.svg"
+  }
 ]
