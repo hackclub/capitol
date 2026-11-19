@@ -1,5 +1,13 @@
 [
   {
+    "recordId": "norochka2010-plan-my-c-day",
+    "projectName": "Plan My C-Day",
+    "demoUrl": "https://mycday.com/",
+    "codeUrl": "https://github.com/Norochka2010/Plan-My-C-Day",
+    "githubUsername": "Norochka2010",
+    "imageSrc": "/gallery/screenshots/norochka2010-plan-my-c-day.png"
+  },
+  {
     "recordId": "recZPTctXUSGFWmLF",
     "projectName": "Sobersteps",
     "demoUrl": "https://soberstepsofficial.vercel.app/",
