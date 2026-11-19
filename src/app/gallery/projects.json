@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "mariomakesapps-high-school-opportunity",
+    "projectName": "High School Opportunity",
+    "demoUrl": "https://highschoolopportunity.org",
+    "codeUrl": "https://github.com/mariomakesapps/HSO",
+    "githubUsername": "mariomakesapps",
+    "imageSrc": "/gallery/screenshots/mariomakesapps-high-school-opportunity.webp"
   }
 ]
