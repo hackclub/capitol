@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
-  }
+  },
+  {
+  "recordId": "L-Logix-cloak",
+  "projectName": "Cloak",
+  "demoUrl": "https://l-logix.github.io/cloak/",
+  "codeUrl": "https://github.com/L-Logix/cloak",
+  "githubUsername": "L-Logix",
+  "imageSrc": "/gallery/screenshots/L-Logix-cloak.webp"
+}
 ]
