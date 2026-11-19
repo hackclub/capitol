@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  }, 
+  {
+    "recordId": "Nerd-124-longevity-simulator",
+    "projectName": "Longevity Simulator",
+    "demoUrl": "https://www.longevitysimulator.com",
+    "codeUrl": "https://github.com/Nerd-124/2627FitnessTracker_CongressApp",
+    "githubUsername": "Nerd-124",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
