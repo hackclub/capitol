@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "dev-with-liam-word-quest",
+    "projectName": "Word Quest",
+    "demoUrl": "https://dev-with-liam.github.io/vocab-practice/",
+    "codeUrl": "https://github.com/dev-with-liam/vocab-practice",
+    "githubUsername": "dev-with-liam",
+    "imageSrc": "/gallery/screenshots/dev-with-liam-word-quest.webp"
   }
 ]
