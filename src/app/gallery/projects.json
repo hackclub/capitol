@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
-  }
+  },
+  {
+  "recordId": "snog1105-hackproof",
+  "projectName": "HackProof",
+  "demoUrl": "https://hackproof-tau.vercel.app/",
+  "codeUrl": "https://github.com/snog1105/Cybersecurity-Educational-Website",
+  "githubUsername": "snog1105",
+  "imageSrc": "/gallery/placeholder.svg"
+}
 ]
