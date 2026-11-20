@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+  "recordId": "michaelkamau-dev-bridgestl",
+  "projectName": "Bridge STL",
+  "demoUrl": "https://michaelkamau-dev.github.io/BridgeSTL/",
+  "codeUrl": "https://github.com/michaelkamau-dev/BridgeSTL",
+  "githubUsername": "michaelkamau-dev",
+  "imageSrc": "/gallery/placeholder.svg"
   }
 ]
