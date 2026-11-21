@@ -1,1 +1,8 @@
-
+[
+  {
+    "name": "EcoRisk NJ",
+    "description": "GIS-based environmental justice application",
+    "repository": "https://github.com/anvayshukla/ecorisk-nj",
+    "author": "Anvay Shukla"
+  }
+]
