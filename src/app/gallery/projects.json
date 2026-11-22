@@ -1,5 +1,13 @@
 [
   {
+  "recordId": "chelsthebot122-heard",
+  "projectName": "HEARD",
+  "demoUrl": "https://heard-app-ruddy.vercel.app",
+  "codeUrl": "https://github.com/chelsthebot122/HEARD-app",
+  "githubUsername": "chelsthebot122",
+  "imageSrc": "/gallery/screenshots/chelsthebot122-heard.jpg"
+  },
+  {
     "recordId": "recZPTctXUSGFWmLF",
     "projectName": "Sobersteps",
     "demoUrl": "https://soberstepsofficial.vercel.app/",
