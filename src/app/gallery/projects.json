@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "wub796-gridevac-ai",
+    "projectName": "GridEvac AI",
+    "demoUrl": "https://grid-evac-ai.vercel.app",
+    "codeUrl": "https://github.com/Wub796/GridEvac-AI",
+    "githubUsername": "Wub796",
+    "imageSrc": "/gallery/screenshots/wub796-gridevac-ai.webp"
   }
 ]
