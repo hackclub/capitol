@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "prajwai-streetwise",
+    "projectName": "StreetWise",
+    "demoUrl": "https://streetwise-cac.vercel.app",
+    "codeUrl": "https://github.com/mt-shemmy/StreetWise",
+    "githubUsername": "PrajwaI",
+    "imageSrc": "/gallery/screenshots/prajwai-streetwise.webp"
   }
 ]
