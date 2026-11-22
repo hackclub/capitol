@@ -1,4 +1,11 @@
-[
+[    {
+      "recordId": "hashemr-bxsci-curblens-nyc",
+      "projectName": "CurbLens NYC",
+      "demoUrl": "https://hashemr-bxsci.github.io/CurbLens-Nyc-/",
+      "codeUrl": "https://github.com/hashemr-bxsci/CurbLens-Nyc-",
+      "githubUsername": "hashemr-bxsci",
+      "imageSrc": "/gallery/screenshots/hashemr-bxsci-curblens-nyc.webp"
+    },
   {
     "recordId": "recZPTctXUSGFWmLF",
     "projectName": "Sobersteps",
