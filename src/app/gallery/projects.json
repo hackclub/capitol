@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "pwn-glitch-civic-sense",
+    "projectName": "Civic Sense",
+    "demoUrl": "https://vimeo.com/1239347939?share=copy&fl=sv&fe=ci",
+    "codeUrl": "https://github.com/PWN-Glitch/civic-sense",
+    "githubUsername": "PWN-Glitch",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
