@@ -8,6 +8,14 @@
     "imageSrc": "/gallery/screenshots/recZPTctXUSGFWmLF.webp"
   },
   {
+    "recordId": "PurpleSummit-DoFresh",
+    "projectName": "DoFresh",
+    "demoUrl": "dofresh.vercel.app",
+    "codeUrl": "https://github.com/PurpleSummit/DoFresh",
+    "githubUsername": "PurpleSummit",
+    "imageSrc": "/gallery/screenshots/PurpleSummit-DoFresh.webp"
+  },
+  {
     "recordId": "recVv2u22LmpHp9Fv",
     "projectName": "Cac",
     "demoUrl": "https://aryanvx.pythonanywhere.com/",
