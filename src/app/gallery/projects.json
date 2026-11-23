@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId":"inweather1ng-do-the-salmon-like-my-creek",
+    "projectName":"Do the Salmon Like My Creek?",
+    "demoUrl":"https://dothesalmonlikemycreek.streamlit.app",
+    "codeUrl":"https://github.com/inweather1ng/Do_the_Salmon_Like_My_Creek",
+    "githubUsername":"inweather1ng",
+    "imageSrc":"/gallery/screenshots/inweather1ng-do-the-salmon-like-my-creek.webp"
   }
 ]
