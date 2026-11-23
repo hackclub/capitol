@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
-  }
+  },
+  {
+  "recordId": "TheBannanaToldMe-quantum-dice",
+  "projectName": "Quantum Dice",
+  "demoUrl": "https://quantum-dice-uqfeel88g6hwdrjpqkk82x.streamlit.app/",
+  "codeUrl": "https://github.com/TheBannanaToldMe/quantum-dice",
+  "githubUsername": "TheBannanaToldMe",
+  "imageSrc": "/gallery/screenshots/TheBannanaToldMe-quantum-dice.webp"
+}
 ]
