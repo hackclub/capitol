@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "SanilSharpsheep-roborescue",
+    "projectName": "RoboRescue",
+    "demoUrl": "https://sanilsharpsheep.github.io/roborescue/",
+    "codeUrl": "https://github.com/SanilSharpsheep/roborescue",
+    "githubUsername": "SanilSharpsheep",
+    "imageSrc": "/gallery/screenshots/SanilSharpsheep-roborescue.jpg"
   }
 ]
