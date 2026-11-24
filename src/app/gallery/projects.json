@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "jakelee2029-aerodose",
+    "projectName": "Aerodose",
+    "demoUrl": "https://aerodose.vercel.app",
+    "codeUrl": "https://github.com/jakelee2029/aerodose",
+    "githubUsername": "jakelee2029",
+    "imageSrc": "/gallery/screenshots/jakelee2029-aerodose.jpg"
   }
 ]
