@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "D-Byun-tinybrave",
+    "projectName": "tinyBRAVE",
+    "demoUrl": "https://testflight.apple.com/join/VUbcZ3v3",
+    "codeUrl": "https://github.com/D-Byun/tiny-brave",
+    "githubUsername": "D-Byun",
+    "imageSrc": "/gallery/screenshots/D-Byun-tinybrave.webp"
   }
 ]
