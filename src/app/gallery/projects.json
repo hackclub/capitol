@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "erika-mead-acwr-tracker",
+    "projectName": "ACWR Activity Tracker",
+    "demoUrl": "https://aswfgp-lily-zheng.shinyapps.io/project/",
+    "codeUrl": "https://github.com/Erika-Mead/Acute-Chronic-Workload-Ratio-Tracker-2026",
+    "githubUsername": "Erika-Mead",
+    "imageSrc": "/gallery/placeholder.svg"
   }
 ]
