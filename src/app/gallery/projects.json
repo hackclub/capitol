@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "ilaws-insquire",
+    "projectName": "InsQuire",
+    "demoUrl": "https://ed.insquire.org",
+    "codeUrl": "https://github.com/ilaws/insquire",
+    "githubUsername": "ilaws",
+    "imageSrc": "/gallery/screenshots/ilaws-insquire.webp"
   }
 ]
