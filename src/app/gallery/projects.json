@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+  "recordId": "vedantarrolaLearnCancer",
+  "projectName": "LearnCancer",
+  "demoUrl": "https://www.youtube.com/watch?v=Xg8rcjea29g",
+  "codeUrl": "https://github.com/vedantarrola/LearnCancer",
+  "githubUsername": "vedantarrola",
+  "imageSrc": "/gallery/screenshots/vedantarrolaLearnCancer.webp"
   }
 ]
