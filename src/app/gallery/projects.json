@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "Ethan-Explorer-Inkwell-AI",
+    "projectName": "Inkwell AI",
+    "demoUrl": "https://snap.berkeley.edu/snap/snap.html#present:Username=blockyethan&ProjectName=Ethan%20Cheng%20-%20CAC%20Inkwell%20App%20-%20Final",
+    "codeUrl": "https://github.com/Ethan-Explorer/Ethan-Cheng-Congressional-App-Challenge-Inkwell-AI",
+    "githubUsername": "Ethan-Explorer",
+    "imageSrc": "/gallery/screenshots/Ethan-Explorer-Inkwell-AI.webp"
   }
 ]
