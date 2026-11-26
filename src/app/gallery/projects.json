@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "rileybautista-moser",
+    "projectName": "MOSER: Modular Open Source Educational Robotics",
+    "demoUrl": "https://moserdesign.org",
+    "codeUrl": "https://github.com/MOSERDesignSystem",
+    "githubUsername": "RileyBautista",
+    "imageSrc": "/gallery/screenshots/rileybautista-moser.png"
   }
 ]
