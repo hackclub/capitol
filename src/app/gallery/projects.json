@@ -1630,5 +1630,12 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
-  }
-]
+  },
+  {
+    "recordId": "honorspreplab-farmer-daily",
+    "projectName": "Farmer Daily",
+    "demoUrl": "https://calm-desert-02e51f41e.1.azurestaticapps.net",
+    "codeUrl": "https://github.com/honorspreplab/farmer-daily-open-source",
+    "githubUsername": "honorspreplab",
+    "imageSrc": "/gallery/screenshots/honorspreplab-farmer-daily.png"
+  }]
