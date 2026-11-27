@@ -1630,5 +1630,13 @@
     "codeUrl": "https://github.com/studyloops37238/mediTrack",
     "githubUsername": "studyloops37238",
     "imageSrc": "/gallery/screenshots/recGMWzedvoALJ3Wb.webp"
+  },
+  {
+    "recordId": "guptaronav-sideline",
+    "projectName": "Sideline",
+    "demoUrl": "https://github.com/guptaronav/Sideline/releases/tag/v0.1.0",
+    "codeUrl": "https://github.com/guptaronav/Sideline",
+    "githubUsername": "guptaronav",
+    "imageSrc": "/gallery/screenshots/guptaronav-sideline.webp"
   }
 ]
